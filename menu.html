@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PJ Bakery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff7e6;
+        }
+        header {
+            background-color: #ffcc99;
+            padding: 30px;
+            text-align: center;
+            position: fixed; /* ทำให้แถบ header คงที่ */
+            width: 100%; /* ให้แถบ header กว้างเต็มหน้าจอ */
+            top: 10;
+            z-index: 998;
+        }
+        nav {
+            padding: 10px; /* เพิ่ม padding ให้ nav */
+            width: 100%; /* ให้ nav กว้างเต็มหน้าจอ */
+            position: fixed; /* ทำให้แถบ nav คงที่ */
+            top: 10px; /* ปรับตามความสูงของ header */
+            left: 76%;
+            z-index: 999; /* ทำให้แน่ใจว่า nav อยู่เหนือ content */
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #d2691e;
+            font-weight: bold;
+        }
+        .contact-info {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .contact-info img {
+            width: 40px;
+            vertical-align: middle;
+        }
+        .contact-info a {
+            
+            margin: 0 5px;
+            text-decoration: none;
+            color: #d2691e;
+            font-weight: bold;
+        }
+        .logo {
+            width: 150px; /* ขยายขนาดโลโก้ */
+            height: auto;
+            position: absolute;
+            top: 85%;
+            left: 48%;
+            transform: translate(-50%, -50%);
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .content2 {
+            padding: 20px;
+            text-align: left;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+        .gallery img {
+            width: 23%; /* ความกว้างของแต่ละรูปในแกลเลอรี */
+            margin: 1%; /* เพิ่ม margin ระหว่างรูป */
+        }
+        .button-container {
+        text-align: center;
+        margin: 20px;
+        }
+        .button-container button {
+            background-color: #d2691e;
+            color: white;
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 46px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button-container button:hover {
+            background-color: #ffcc99;
+            color: #d2691e;
+        }
+        .media-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px; /* เพิ่ม margin รอบๆ */
+        }
+        .media-container video,
+        .media-container img {
+            flex: 1;
+            margin: 10px; /* เพิ่ม margin ระหว่างวิดีโอและรูปภาพ */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="image/icon/logo-removebg-preview.png" alt="PJ Bakery Logo" class="logo"></a>
+        <div class="contact-info">
+            <a href="tel:061-989-XXXX">
+                <img src="image/icon/iconcall.png" alt="Phone"> 061-989-XXXX
+            </a>
+            <a href="https://www.facebook.com/vorapat.pattarapreamcharoen/" target="_blank">
+                <img src="image/icon/iconfacebook.png" alt="Facebook"> Facebook
+            </a>
+            <a href="https://line.me/R/ti/p/~vorapatopztv" target="_blank">
+                <img src="image/icon/iconline.png" alt="Line"> Line
+            </a>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="information.html">Information</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="content">
+        <br><br><br><br>
+        <h1>เมนูของเรา</h1>
+    </div>
+    <div class="content2">
+        <h1>    ความอร่อยที่คุณคู่ควร</h1>
+        <p> ที่ PJ Bakery เราใส่ใจทุกขั้นตอนในการทำขนม เพื่อให้คุณได้รับประสบการณ์ที่ยอดเยี่ยมที่สุดในการลิ้มลอง </p>
+        <p>ไม่ว่าจะเป็นขนมปังหอมกรุ่น เค้กเนื้อนุ่ม คุกกี้กรอบอร่อย หรือพายที่มีไส้แน่นๆ</p>     
+        <p>ทุกเมนูถูกสร้างสรรค์ด้วยความรักและความใส่ใจในรายละเอียด
+        <h1>หลากหลายเมนู</h1>
+        <p>ไม่ว่าคุณจะชอบขนมประเภทไหน ที่นี่เรามีครบทุกความต้องการ</p>
+        <p>ตั้งแต่เค้กวันเกิดสุดพิเศษไปจนถึงคุกกี้แสนอร่อยที่เด็กๆ ชื่นชอบ</p>
+        <h1>ความสะอาดและปลอดภัย</h1>
+        <p>ทุกขั้นตอนการผลิตของเราถูกควบคุมอย่างเข้มงวด เพื่อให้แน่ใจว่าขนมทุกชิ้นปลอดภัยและสะอาดที่สุด</p>
+
+    </div>
+    <script>
+        fetch('head.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('head-content').innerHTML = data;
+            });
+    </script>
+    
+    <div class="media-container">
+        <img src="image/icon/snack1.jpg" width="50%">
+        <img src="image/icon/snack2.jpg" width="50%">
+    </div>
+    <div class="media-container">
+        <img src="image/icon/snack3.jpg" width="50%">
+        <img src="image/icon/snack4.jpg" width="50%">
+    </div>
+    <div class="button-container">
+        <button onclick="location.href='contact.html'">ติดต่อสั่งซื้อ</button>
+    </div>
+</body>
+</html>

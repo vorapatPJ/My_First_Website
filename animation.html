@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation - PJ Bakery</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        video {
+            width: 100%;
+            height: auto;
+        }
+        .info-box {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff7e6;
+            border: 2px solid #d2691e;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 10;
+            text-align: center;
+        }
+        .info-box img {
+            max-width: 100%;
+            height: auto;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: transparent;
+            border: none;
+            font-size: 80px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <video id="animationVideo" autoplay muted playsinline>
+        <source src="mp/Untitled video - Made with Clipchamp.mp4" type="video/mp4">
+        <!--Your browser does not support the video tag.-->
+    </video>
+    
+
+    <div class="info-box" id="infoBox">
+        <button class="close-btn" onclick="closeInfoBox()">×</button>
+        <img src="image/icon/show.png" alt="Info Image">
+        <p>Welcome to PJ Bakery! Enjoy our delicious cakes and pastries made with love.</p>
+    </div>
+
+    <script>
+        document.getElementById('animationVideo').addEventListener('canplay', function() {
+            this.play();
+        }, false);
+
+        document.getElementById('animationVideo').onended = function() {
+            document.getElementById('infoBox').style.display = 'block';
+        };
+
+        function closeInfoBox() {
+            document.getElementById('infoBox').style.display = 'none';
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
