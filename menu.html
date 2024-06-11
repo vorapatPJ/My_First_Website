@@ -4,111 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PJ Bakery</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fff7e6;
-        }
-        header {
-            background-color: #ffcc99;
-            padding: 30px;
-            text-align: center;
-            position: fixed; /* ทำให้แถบ header คงที่ */
-            width: 100%; /* ให้แถบ header กว้างเต็มหน้าจอ */
-            top: 10;
-            z-index: 998;
-        }
-        nav {
-            padding: 10px; /* เพิ่ม padding ให้ nav */
-            width: 100%; /* ให้ nav กว้างเต็มหน้าจอ */
-            position: fixed; /* ทำให้แถบ nav คงที่ */
-            top: 10px; /* ปรับตามความสูงของ header */
-            left: 76%;
-            z-index: 999; /* ทำให้แน่ใจว่า nav อยู่เหนือ content */
-        }
-        nav a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #d2691e;
-            font-weight: bold;
-        }
-        .contact-info {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-        }
-        .contact-info img {
-            width: 40px;
-            vertical-align: middle;
-        }
-        .contact-info a {
-            
-            margin: 0 5px;
-            text-decoration: none;
-            color: #d2691e;
-            font-weight: bold;
-        }
-        .logo {
-            width: 150px; /* ขยายขนาดโลโก้ */
-            height: auto;
-            position: absolute;
-            top: 85%;
-            left: 48%;
-            transform: translate(-50%, -50%);
-        }
-        .content {
-            padding: 20px;
-            text-align: center;
-        }
-        .content2 {
-            padding: 20px;
-            text-align: left;
-        }
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 20px;
-        }
-        .gallery img {
-            width: 23%; /* ความกว้างของแต่ละรูปในแกลเลอรี */
-            margin: 1%; /* เพิ่ม margin ระหว่างรูป */
-        }
-        .button-container {
-        text-align: center;
-        margin: 20px;
-        }
-        .button-container button {
-            background-color: #d2691e;
-            color: white;
-            border: none;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 46px;
-            margin: 4px 2px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .button-container button:hover {
-            background-color: #ffcc99;
-            color: #d2691e;
-        }
-        .media-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 20px; /* เพิ่ม margin รอบๆ */
-        }
-        .media-container video,
-        .media-container img {
-            flex: 1;
-            margin: 10px; /* เพิ่ม margin ระหว่างวิดีโอและรูปภาพ */
-        }
-    </style>
+    <link rel="stylesheet" href="menu.css">
 </head>
 <body>
     <header>
@@ -145,26 +41,86 @@
         <p>ตั้งแต่เค้กวันเกิดสุดพิเศษไปจนถึงคุกกี้แสนอร่อยที่เด็กๆ ชื่นชอบ</p>
         <h1>ความสะอาดและปลอดภัย</h1>
         <p>ทุกขั้นตอนการผลิตของเราถูกควบคุมอย่างเข้มงวด เพื่อให้แน่ใจว่าขนมทุกชิ้นปลอดภัยและสะอาดที่สุด</p>
+    </div>
 
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="image/bread/bread1.jpg" alt="Bakery 1">
+            <p>ครัวซอง 25฿</p>
+            <div class="quantity-controls">
+                <button onclick="decrement('item1')">-</button>
+                <span id="item1">0</span>
+                <button onclick="increment('item1')">+</button>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="image/bread/bread2.jpg" alt="Bakery 2">
+            <p>ขนมปังใส้กรอก 20฿</p>
+            <div class="quantity-controls">
+                <button onclick="decrement('item2')">-</button>
+                <span id="item2">0</span>
+                <button onclick="increment('item2')">+</button>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="image/bread/bread3.jpg" alt="Bakery 3">
+            <p>โรลแฮม 20฿</p>
+            <div class="quantity-controls">
+                <button onclick="decrement('item3')">-</button>
+                <span id="item3">0</span>
+                <button onclick="increment('item3')">+</button>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="image/bread/bread4.jpg" alt="Bakery 4">
+            <p>เบอเกอไก่สับไข่เค็ม 25฿</p>
+            <div class="quantity-controls">
+                <button onclick="decrement('item4')">-</button>
+                <span id="item4">0</span>
+                <button onclick="increment('item4')">+</button>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="image/cake/cake1.jpg" alt="Bakery 5">
+            <p>เค้กเนยสดลายหินอ่อน 30฿</p>
+            <div class="quantity-controls">
+                <button onclick="decrement('item5')">-</button>
+                <span id="item5">0</span>
+                <button onclick="increment('item5')">+</button>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="image/cake/cake2.jpg" alt="Bakery 6">
+            <p>เค้กเนยสด 25฿</p>
+            <div class="quantity-controls">
+                <button onclick="decrement('item6')">-</button>
+                <span id="item6">0</span>
+                <button onclick="increment('item6')">+</button>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="image/cake/cake3.jpg" alt="Bakery 7">
+            <p>เค้กกล้วยหอม 20฿</p>
+            <div class="quantity-controls">
+                <button onclick="decrement('item7')">-</button>
+                <span id="item7">0</span>
+                <button onclick="increment('item7')">+</button>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="image/cake/cake4.jpg" alt="Bakery 8">
+            <p>เดนิชฟรุ๊ต 30฿</p>
+            <div class="quantity-controls">
+                <button onclick="decrement('item8')">-</button>
+                <span id="item8">0</span>
+                <button onclick="increment('item8')">+</button>
+            </div>
+        </div>
     </div>
-    <script>
-        fetch('head.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('head-content').innerHTML = data;
-            });
-    </script>
-    
-    <div class="media-container">
-        <img src="image/icon/snack1.jpg" width="50%">
-        <img src="image/icon/snack2.jpg" width="50%">
-    </div>
-    <div class="media-container">
-        <img src="image/icon/snack3.jpg" width="50%">
-        <img src="image/icon/snack4.jpg" width="50%">
-    </div>
+    <div class="alert" id="alert">กรุณาเลือกสินค้าก่อนสั่งซื้อ</div>
     <div class="button-container">
-        <button onclick="location.href='contact.html'">ติดต่อสั่งซื้อ</button>
+        <button onclick="goToBuyPage()">สั่งซื้อ</button>
     </div>
+    <script src="menu.js"></script>
 </body>
 </html>

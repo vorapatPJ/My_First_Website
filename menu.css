@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff7e6;
+}
+header {
+    background-color: #ffcc99;
+    padding: 30px;
+    text-align: center;
+    position: fixed; /* ทำให้แถบ header คงที่ */
+    width: 100%; /* ให้แถบ header กว้างเต็มหน้าจอ */
+    top: 10;
+    z-index: 998;
+}
+nav {
+    padding: 10px; /* เพิ่ม padding ให้ nav */
+    width: 100%; /* ให้ nav กว้างเต็มหน้าจอ */
+    position: fixed; /* ทำให้แถบ nav คงที่ */
+    top: 10px; /* ปรับตามความสูงของ header */
+    left: 76%;
+    z-index: 999; /* ทำให้แน่ใจว่า nav อยู่เหนือ content */
+}
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #d2691e;
+    font-weight: bold;
+}
+.contact-info {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.contact-info img {
+    width: 40px;
+    vertical-align: middle;
+}
+.contact-info a {
+    
+    margin: 0 5px;
+    text-decoration: none;
+    color: #d2691e;
+    font-weight: bold;
+}
+.logo {
+    width: 150px; /* ขยายขนาดโลโก้ */
+    height: auto;
+    position: absolute;
+    top: 85%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+}
+.content {
+    padding: 20px;
+    text-align: center;
+}
+.content2 {
+    padding: 20px;
+    text-align: left;
+}
+
+.button-container {
+text-align: center;
+margin: 20px;
+}
+.button-container button {
+    background-color: #d2691e;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 46px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.button-container button:hover {
+    background-color: #ffcc99;
+    color: #d2691e;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+.gallery-item {
+    width: 22%;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid #d2691e;
+    border-radius: 10px;
+    background-color: #fff7e6;
+    padding: 10px;
+}
+.gallery-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+.gallery-item p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #d2691e;
+}
+.quantity-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.quantity-controls button {
+    background-color: #d2691e;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+.quantity-controls span {
+    font-size: 18px;
+    color: #d2691e;
+    margin: 0 5px;
+}
+.alert {
+    display: none;
+    color: red;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PJ Bakery - Buy</title>
+    <link rel="stylesheet" href="buy.css">
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="image/icon/logo-removebg-preview.png" alt="PJ Bakery Logo" class="logo"></a>
+        <div class="contact-info">
+            <a href="tel:061-989-XXXX">
+                <img src="image/icon/iconcall.png" alt="Phone"> 061-989-XXXX
+            </a>
+            <a href="https://www.facebook.com/vorapat.pattarapreamcharoen/" target="_blank">
+                <img src="image/icon/iconfacebook.png" alt="Facebook"> Facebook
+            </a>
+            <a href="https://line.me/R/ti/p/~vorapatopztv" target="_blank">
+                <img src="image/icon/iconline.png" alt="Line"> Line
+            </a>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="information.html">Information</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="content">
+        <div class="content-left" id="order-items">
+            <!-- รูปขนมที่เลือกจะถูกเพิ่มที่นี่ -->
+        </div>
+        <div class="content-right">
+            <div class="order-summary">
+                <h2>สรุปการสั่งซื้อ</h2>
+                <p id="total-quantity">จำนวนรวม: 0</p>
+                <p id="total-price">ราคารวม: 0฿</p>
+                <div class="button-container">
+                    <button onclick="confirmOrder()">ยืนยันการสั่งซื้อ</button>
+                </div>
+                <div class="alert" id="alert">สินค้ามีจำนวน 0</div>
+            </div>
+        </div>
+    </div>
+    <script src="buy.js"></script>
+</body>
+</html>
